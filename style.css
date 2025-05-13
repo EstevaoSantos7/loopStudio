@@ -5,6 +5,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .containerInicio {
     width: 100%;
     height: 84vh;
@@ -71,6 +75,7 @@
         }
     }
 }
+
 
 .containerPropaganda {
     display: flex;
@@ -155,16 +160,20 @@
             .caixa {
                 position: relative;
                 transition: all 0.5s;
+                overflow: hidden;
 
-                &:hover {
-                    transform: translateY(-5px);
-                }
-
-                img {
+                .cardImage {
                     width: 100%;
                     object-fit: cover;
-                    filter: brightness(0.8);
+                    filter: brightness(0.7);
                     transition: all 0.5s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: all .5s;
+                        filter: brightness(0.9);
+                    }
+
                 }
 
                 .nameCaixa {
@@ -249,12 +258,12 @@
                 gap: 15px;
                 flex-direction: row;
                 justify-content: end;
-               
-                img{
+
+                img {
                     cursor: pointer;
-                  
+
                 }
-                
+
             }
 
             .termos {
